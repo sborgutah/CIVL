@@ -1,0 +1,23 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+74s: mem=479Mb trans=943 traceSteps=495 explored=938 saved=491 prove=1
+89s: mem=479Mb trans=3679 traceSteps=1920 explored=3662 saved=1904 prove=1
+104s: mem=479Mb trans=7849 traceSteps=4106 explored=7817 saved=4075 prove=1
+
+=== Command ===
+civl verify examples/verifyThisProblems/dancingLinks.c 
+
+=== Stats ===
+   time (s)            : 105.31
+   memory (bytes)      : 502792192
+   max process count   : 1
+   states              : 8405
+   states saved        : 4374
+   state matches       : 35
+   transitions         : 8439
+   trace steps         : 4408
+   valid calls         : 14455
+   provers             : cvc3
+   prover calls        : 1
+
+=== Result ===
+The standard properties hold for all executions.

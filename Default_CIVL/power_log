@@ -1,0 +1,20 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+
+=== Command ===
+civl verify examples/reasoning/power.cvl 
+
+=== Stats ===
+   time (s)            : 35.39
+   memory (bytes)      : 502792192
+   max process count   : 1
+   states              : 6
+   states saved        : 2
+   state matches       : 0
+   transitions         : 5
+   trace steps         : 1
+   valid calls         : 6
+   provers             : cvc3
+   prover calls        : 2
+
+=== Result ===
+The standard properties hold for all executions.

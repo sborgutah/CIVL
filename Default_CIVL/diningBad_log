@@ -1,0 +1,43 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+
+Violation 0 encountered at depth 21:
+CIVL execution violation (kind: DEADLOCK, certainty: PROVEABLE)
+at diningBad.cvl:31.11-12 ";":
+A deadlock is possible:
+  Path condition: true
+  Enabling predicate: false
+process p0 (id=0): false
+process p1 (id=1): false
+process p2 (id=2): false
+
+Call stacks:
+process p0 (id=0):
+  main at diningBad.cvl:31.11-12 ";"
+process p1 (id=1):
+  dine at diningBad.cvl:21.4-9 "$when" called from
+  _par_proc0 at diningBad.cvl:31.4-8 "dine"
+process p2 (id=2):
+  dine at diningBad.cvl:21.4-9 "$when" called from
+  _par_proc0 at diningBad.cvl:31.4-8 "dine"
+
+Logging new entry 0, writing trace to CIVLREP/diningBad_0.trace
+Terminating search after finding 1 violation.
+
+=== Command ===
+civl verify examples/concurrency/diningBad.cvl 
+
+=== Stats ===
+   time (s)            : 48.4
+   memory (bytes)      : 502792192
+   max process count   : 3
+   states              : 30
+   states saved        : 21
+   state matches       : 1
+   transitions         : 28
+   trace steps         : 21
+   valid calls         : 391
+   provers             : cvc3
+   prover calls        : 5
+
+=== Result ===
+The program MAY NOT be correct.  See CIVLREP/diningBad_log.txt

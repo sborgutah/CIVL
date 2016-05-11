@@ -1,0 +1,45 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+62s: mem=479Mb trans=255 traceSteps=76 explored=228 saved=50 prove=31
+77s: mem=479Mb trans=2524 traceSteps=720 explored=2163 saved=359 prove=31
+1. Curr_Bound = 0
+
+After assigning the nextStack = 462
+2. New_Bound = 1
+
+2. NextStack-Size = 0
+
+92s: mem=479Mb trans=7711 traceSteps=2344 explored=6378 saved=1012 prove=31
+1. Curr_Bound = 1
+
+After assigning the nextStack = 456
+2. New_Bound = 2
+
+2. NextStack-Size = 0
+
+1. Curr_Bound = 2
+
+After assigning the nextStack = 102
+2. New_Bound = 3
+
+2. NextStack-Size = 0
+
+workRemains = false
+
+=== Command ===
+civl verify examples/concurrency/blockAdder.cvl 
+
+=== Stats ===
+   time (s)            : 99.85
+   memory (bytes)      : 502792192
+   max process count   : 4
+   states              : 10413
+   states saved        : 1261
+   state matches       : 2238
+   transitions         : 12650
+   trace steps         : 3498
+   valid calls         : 20675
+   provers             : cvc3
+   prover calls        : 31
+
+=== Result ===
+The standard properties hold for all executions.

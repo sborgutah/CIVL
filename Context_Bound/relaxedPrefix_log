@@ -1,0 +1,54 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+78s: mem=479Mb trans=54 traceSteps=26 explored=46 saved=20 prove=41
+93s: mem=479Mb trans=54 traceSteps=26 explored=46 saved=20 prove=46
+108s: mem=479Mb trans=54 traceSteps=26 explored=46 saved=20 prove=47
+123s: mem=479Mb trans=60 traceSteps=30 explored=50 saved=22 prove=59
+138s: mem=479Mb trans=60 traceSteps=30 explored=50 saved=22 prove=60
+153s: mem=479Mb trans=60 traceSteps=30 explored=50 saved=22 prove=62
+168s: mem=479Mb trans=78 traceSteps=39 explored=65 saved=28 prove=82
+183s: mem=479Mb trans=94 traceSteps=45 explored=79 saved=32 prove=89
+198s: mem=479Mb trans=94 traceSteps=45 explored=79 saved=32 prove=92
+213s: mem=479Mb trans=110 traceSteps=53 explored=90 saved=35 prove=105
+228s: mem=479Mb trans=132 traceSteps=66 explored=103 saved=39 prove=122
+243s: mem=479Mb trans=194 traceSteps=97 explored=153 saved=58 prove=167
+1. Curr_Bound = 0
+
+After assigning the nextStack = 52
+2. New_Bound = 1
+
+2. NextStack-Size = 0
+
+1. Curr_Bound = 1
+
+After assigning the nextStack = 0
+2. New_Bound = 2
+
+2. NextStack-Size = 0
+
+1. Curr_Bound = 2
+
+After assigning the nextStack = 0
+2. New_Bound = 3
+
+2. NextStack-Size = 0
+
+workRemains = false
+
+=== Command ===
+civl verify examples/verifyThisProblems/relaxedPrefix.c 
+
+=== Stats ===
+   time (s)            : 246.65
+   memory (bytes)      : 502792192
+   max process count   : 1
+   states              : 214
+   states saved        : 72
+   state matches       : 71
+   transitions         : 284
+   trace steps         : 142
+   valid calls         : 1685
+   provers             : cvc3
+   prover calls        : 195
+
+=== Result ===
+The standard properties hold for all executions.

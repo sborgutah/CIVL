@@ -1,0 +1,20 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+
+=== Command ===
+civl verify examples/reasoning/neqZero.cvl 
+
+=== Stats ===
+   time (s)            : 35.96
+   memory (bytes)      : 502792192
+   max process count   : 1
+   states              : 8
+   states saved        : 4
+   state matches       : 0
+   transitions         : 7
+   trace steps         : 3
+   valid calls         : 51
+   provers             : cvc3
+   prover calls        : 0
+
+=== Result ===
+The standard properties hold for all executions.

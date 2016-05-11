@@ -1,0 +1,37 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+
+Violation 0 encountered at depth 3:
+CIVL execution violation in p0 (id = 0) (kind: MEMORY_LEAK, certainty: PROVEABLE)
+at malloc.cvl:5.0-11.1 "void main() {\n   ... }":
+An unreachable object (mallocID=0, objectID=0) is detectd in the heap of dyscope d0(id=0).
+heap
+| objects of malloc 0 at malloc.cvl:9.8-44 "a=(double *)malloc( ... )"
+| | 0: $real[5]Hop0s0f0o0
+
+Context:
+  0<=(SIZEOF_REAL-1)
+Call stacks:
+process p0 (id=0):
+  main at malloc.cvl:11.0-1 "}"
+
+Logging new entry 0, writing trace to CIVLREP/malloc_0.trace
+Terminating search after finding 1 violation.
+
+=== Command ===
+civl verify examples/sideEffects/malloc.cvl 
+
+=== Stats ===
+   time (s)            : 57.77
+   memory (bytes)      : 502792192
+   max process count   : 1
+   states              : 4
+   states saved        : 3
+   state matches       : 0
+   transitions         : 4
+   trace steps         : 2
+   valid calls         : 10
+   provers             : cvc3
+   prover calls        : 1
+
+=== Result ===
+The program MAY NOT be correct.  See CIVLREP/malloc_log.txt

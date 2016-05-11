@@ -1,0 +1,21 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+50s: mem=479Mb trans=20 traceSteps=7 explored=19 saved=8 prove=33
+
+=== Command ===
+civl verify examples/verifyThisProblems/quantifiedComp.cvl 
+
+=== Stats ===
+   time (s)            : 51.16
+   memory (bytes)      : 502792192
+   max process count   : 1
+   states              : 30
+   states saved        : 11
+   state matches       : 0
+   transitions         : 29
+   trace steps         : 10
+   valid calls         : 363
+   provers             : cvc3
+   prover calls        : 35
+
+=== Result ===
+The standard properties hold for all executions.

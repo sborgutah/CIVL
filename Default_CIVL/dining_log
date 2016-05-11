@@ -1,0 +1,21 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+55s: mem=479Mb trans=285 traceSteps=204 explored=220 saved=133 prove=5
+
+=== Command ===
+civl verify examples/concurrency/dining.cvl 
+
+=== Stats ===
+   time (s)            : 63.79
+   memory (bytes)      : 502792192
+   max process count   : 5
+   states              : 568
+   states saved        : 345
+   state matches       : 295
+   transitions         : 856
+   trace steps         : 639
+   valid calls         : 14436
+   provers             : cvc3
+   prover calls        : 5
+
+=== Result ===
+The standard properties hold for all executions.

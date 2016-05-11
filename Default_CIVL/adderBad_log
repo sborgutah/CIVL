@@ -1,0 +1,43 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+
+Violation 0 encountered at depth 37:
+CIVL execution violation in p0(id=0) (kind: ASSERTION_VIOLATION, certainty: PROVEABLE)
+at adderBad.cvl:43.2-21 "$assert(seq == par)":
+
+Assertion:
+   $assert(X_a[1]+X_a[2]+X_a[3]+X_a[4]+X_a[0]==X_a[1]+X_a[2]+X_a[4]+X_a[0])
+-> X_a[1]+X_a[2]+X_a[3]+X_a[4]+X_a[0]==X_a[1]+X_a[2]+X_a[4]+X_a[0]
+-> 0==X_a[3]
+
+Input:
+  B=5
+  N=5
+  a=X_a
+Context:
+  true
+Call stacks:
+process p0 (id=0):
+  main at adderBad.cvl:43.2-9 "$assert"
+
+Logging new entry 0, writing trace to CIVLREP/adderBad_0.trace
+52s: mem=479Mb trans=72 traceSteps=42 explored=72 saved=43 prove=22
+Terminating search after finding 1 violation.
+
+=== Command ===
+civl verify examples/concurrency/adderBad.cvl 
+
+=== Stats ===
+   time (s)            : 51.79
+   memory (bytes)      : 502792192
+   max process count   : 6
+   states              : 72
+   states saved        : 43
+   state matches       : 0
+   transitions         : 72
+   trace steps         : 42
+   valid calls         : 1565
+   provers             : cvc3
+   prover calls        : 22
+
+=== Result ===
+The program MAY NOT be correct.  See CIVLREP/adderBad_log.txt

@@ -1,0 +1,37 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+113s: mem=479Mb trans=3 traceSteps=0 explored=3 saved=1 prove=87
+
+Violation 0 encountered at depth 2:
+CIVL execution violation in p0 (id = 0) (kind: INTERNAL, certainty: PROVEABLE)
+at OpenMPTransformer:0.-1-15 "_omp_num_threads" inserted by OpenMPTransformer._nthreadsDeclaration before op.h:21.1-10 "Operation" included from civlc.cvh:8.8-14 "<op.h>" included from omp.cvl:1.9-20 "<civlc.cvh>":
+argument to $choose_int not concrete: X__omp_thread_max
+
+Input:
+  _omp_thread_max=X__omp_thread_max
+Context:
+  (X__omp_thread_max + 1)<=0
+Call stacks:
+process p0 (id=0):
+  main at OpenMPTransformer:0.-1-15 "_omp_num_threads" inserted by OpenMPTransformer._nthreadsDeclaration before op.h:21.1-10 "Operation" included from civlc.cvh:8.8-14 "<op.h>" included from omp.cvl:1.9-20 "<civlc.cvh>"
+
+Logging new entry 0, writing trace to CIVLREP/parallelfor_0.trace
+Terminating search after finding 1 violation.
+
+=== Command ===
+civl verify examples/omp/parallelfor.c 
+
+=== Stats ===
+   time (s)            : 115.31
+   memory (bytes)      : 502792192
+   max process count   : 1
+   states              : 4
+   states saved        : 2
+   state matches       : 0
+   transitions         : 3
+   trace steps         : 1
+   valid calls         : 207
+   provers             : cvc3
+   prover calls        : 103
+
+=== Result ===
+The program MAY NOT be correct.  See CIVLREP/parallelfor_log.txt

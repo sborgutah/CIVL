@@ -1,0 +1,46 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+85s: mem=479Mb trans=965 traceSteps=739 explored=625 saved=399 prove=0
+1. Curr_Bound = 0
+
+After assigning the nextStack = 676
+2. New_Bound = 1
+
+2. NextStack-Size = 0
+
+100s: mem=479Mb trans=3887 traceSteps=3236 explored=2125 saved=1475 prove=0
+1. Curr_Bound = 1
+
+After assigning the nextStack = 2287
+2. New_Bound = 2
+
+2. NextStack-Size = 0
+
+115s: mem=479Mb trans=10380 traceSteps=8309 explored=5520 saved=3450 prove=0
+130s: mem=479Mb trans=22216 traceSteps=17412 explored=10965 saved=6161 prove=0
+1. Curr_Bound = 2
+
+After assigning the nextStack = 2745
+2. New_Bound = 3
+
+2. NextStack-Size = 0
+
+workRemains = false
+
+=== Command ===
+civl verify examples/concurrency/exitBarrier.cvl 
+
+=== Stats ===
+   time (s)            : 131.18
+   memory (bytes)      : 502792192
+   max process count   : 5
+   states              : 11179
+   states saved        : 6319
+   state matches       : 11847
+   transitions         : 23025
+   trace steps         : 18165
+   valid calls         : 45959
+   provers             : cvc3
+   prover calls        : 0
+
+=== Result ===
+The standard properties hold for all executions.

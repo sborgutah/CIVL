@@ -1,0 +1,53 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+66s: mem=479Mb trans=75 traceSteps=56 explored=62 saved=44 prove=31
+81s: mem=479Mb trans=201 traceSteps=156 explored=145 saved=101 prove=66
+
+Violation 0 encountered at depth 29:
+CIVL execution violation in p0(id=0) (kind: ASSERTION_VIOLATION, certainty: MAYBE)
+at parallelGCD.c:81.2-70 "$assert($forall {i =  ... )":
+
+Assertion:
+   $assert(FORALL {int i=(result1+1)..minAB} (((A%i)!=0)||((B%i)!=0)))
+-> FORALL {int i=(result1+1)..minAB} (((A%i)!=0)||((B%i)!=0))
+-> forall i : int . (0 != X_A%i || 0 != X_B%i || !(3*X_A - 2*X_B - 1*i + 1 <= 0) || !(0 <= X_A - 1*i))
+
+Input:
+  A_BOUND=4
+  B_BOUND=6
+  A=X_A
+  B=X_B
+Context:
+  (X_A - 1*X_B + 1)<=0
+  (X_A - 3)<=0
+  (X_B - 5)<=0
+  0<=(X_A - 1)
+  0<=(2*X_A - 1*X_B - 1)
+  0<=(3*X_A - 2*X_B - 1)
+  0<=(X_B - 1)
+  0!=(X_A-1*X_B)
+  0!=(3*X_A-2*X_B)
+Call stacks:
+process p0 (id=0):
+  main at parallelGCD.c:81.2-9 "$assert"
+
+Logging new entry 0, writing trace to CIVLREP/parallelGCD_0.trace
+Terminating search after finding 1 violation.
+
+=== Command ===
+civl verify examples/verifyThisProblems/parallelGCD.c 
+
+=== Stats ===
+   time (s)            : 87.78
+   memory (bytes)      : 502792192
+   max process count   : 3
+   states              : 158
+   states saved        : 111
+   state matches       : 56
+   transitions         : 214
+   trace steps         : 166
+   valid calls         : 679
+   provers             : cvc3
+   prover calls        : 76
+
+=== Result ===
+The program MAY NOT be correct.  See CIVLREP/parallelGCD_log.txt

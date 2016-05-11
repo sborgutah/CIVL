@@ -1,0 +1,55 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+94s: mem=479Mb trans=610 traceSteps=412 explored=434 saved=238 prove=0
+109s: mem=479Mb trans=2162 traceSteps=1505 explored=1433 saved=777 prove=0
+1. Curr_Bound = 0
+
+After assigning the nextStack = 898
+2. New_Bound = 1
+
+2. NextStack-Size = 0
+
+124s: mem=479Mb trans=4587 traceSteps=3205 explored=2975 saved=1594 prove=0
+139s: mem=479Mb trans=8974 traceSteps=6409 explored=5671 saved=3106 prove=0
+154s: mem=479Mb trans=15412 traceSteps=10866 explored=9774 saved=5229 prove=0
+169s: mem=479Mb trans=23962 traceSteps=16788 explored=15317 saved=8143 prove=0
+184s: mem=479Mb trans=38002 traceSteps=26811 explored=24150 saved=12960 prove=0
+199s: mem=479Mb trans=56494 traceSteps=39906 explored=35880 saved=19293 prove=0
+1. Curr_Bound = 1
+
+After assigning the nextStack = 22721
+2. New_Bound = 2
+
+2. NextStack-Size = 0
+
+214s: mem=476Mb trans=79829 traceSteps=56220 explored=50738 saved=27130 prove=0
+229s: mem=474Mb trans=110904 traceSteps=77980 explored=70370 saved=37447 prove=0
+244s: mem=469Mb trans=164344 traceSteps=115278 explored=104359 saved=55294 prove=0
+259s: mem=735Mb trans=274066 traceSteps=192178 explored=173751 saved=91864 prove=0
+274s: mem=885Mb trans=435301 traceSteps=305128 explored=270340 saved=140167 prove=0
+1. Curr_Bound = 2
+
+After assigning the nextStack = 144549
+2. New_Bound = 3
+
+2. NextStack-Size = 0
+
+workRemains = false
+
+=== Command ===
+civl verify examples/concurrency/ring2Bad.cvl 
+
+=== Stats ===
+   time (s)            : 281.12
+   memory (bytes)      : 1146093568
+   max process count   : 4
+   states              : 333350
+   states saved        : 171360
+   state matches       : 206901
+   transitions         : 540250
+   trace steps         : 378260
+   valid calls         : 1314798
+   provers             : cvc3
+   prover calls        : 0
+
+=== Result ===
+The standard properties hold for all executions.

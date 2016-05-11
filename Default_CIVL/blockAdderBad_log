@@ -1,0 +1,45 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+
+Violation 0 encountered at depth 31:
+CIVL execution violation (kind: DEADLOCK, certainty: PROVEABLE)
+at blockAdderBad.cvl:46.2-10 "$waitall":
+A deadlock is possible:
+  Path condition: true
+  Enabling predicate: false
+process p0 (id=0): false
+process p1 (id=1): terminated
+process p2 (id=2): false
+process p3 (id=3): false
+
+Call stacks:
+process p0 (id=0):
+  adder_par at blockAdderBad.cvl:46.2-10 "$waitall" called from
+  main at blockAdderBad.cvl:52.19-28 "adder_par"
+process p1 (id=1):
+  terminated
+process p2 (id=2):
+  run_worker at blockAdderBad.cvl:38.4-9 "$when"
+process p3 (id=3):
+  run_worker at blockAdderBad.cvl:38.4-9 "$when"
+
+Logging new entry 0, writing trace to CIVLREP/blockAdderBad_0.trace
+Terminating search after finding 1 violation.
+
+=== Command ===
+civl verify examples/concurrency/blockAdderBad.cvl 
+
+=== Stats ===
+   time (s)            : 52.51
+   memory (bytes)      : 502792192
+   max process count   : 4
+   states              : 93
+   states saved        : 31
+   state matches       : 0
+   transitions         : 92
+   trace steps         : 30
+   valid calls         : 390
+   provers             : cvc3
+   prover calls        : 31
+
+=== Result ===
+The program MAY NOT be correct.  See CIVLREP/blockAdderBad_log.txt

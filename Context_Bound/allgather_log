@@ -1,0 +1,49 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+160s: mem=479Mb trans=1208 traceSteps=732 explored=861 saved=384 prove=2
+1. Curr_Bound = 0
+
+After assigning the nextStack = 634
+2. New_Bound = 1
+
+2. NextStack-Size = 0
+
+175s: mem=479Mb trans=4838 traceSteps=3003 explored=3333 saved=1497 prove=2
+190s: mem=479Mb trans=10889 traceSteps=6809 explored=7469 saved=3388 prove=2
+205s: mem=479Mb trans=18042 traceSteps=11239 explored=12405 saved=5601 prove=2
+220s: mem=482Mb trans=29140 traceSteps=18048 explored=20117 saved=9024 prove=2
+1. Curr_Bound = 1
+
+After assigning the nextStack = 13685
+2. New_Bound = 2
+
+2. NextStack-Size = 0
+
+235s: mem=483Mb trans=48275 traceSteps=29971 explored=32779 saved=14474 prove=2
+250s: mem=437Mb trans=85534 traceSteps=51514 explored=57755 saved=23734 prove=2
+1. Curr_Bound = 2
+
+After assigning the nextStack = 12533
+2. New_Bound = 3
+
+2. NextStack-Size = 0
+
+workRemains = false
+
+=== Command ===
+civl verify -input_mpi_nprocs=2 examples/mpi/simple/allgather.c 
+
+=== Stats ===
+   time (s)            : 256.82
+   memory (bytes)      : 449839104
+   max process count   : 3
+   states              : 69691
+   states saved        : 27118
+   state matches       : 41082
+   transitions         : 110770
+   trace steps         : 68199
+   valid calls         : 497269
+   provers             : cvc3
+   prover calls        : 2
+
+=== Result ===
+The standard properties hold for all executions.

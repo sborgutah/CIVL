@@ -1,0 +1,79 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+61s: mem=479Mb trans=515 traceSteps=485 explored=516 saved=486 prove=0
+77s: mem=479Mb trans=3181 traceSteps=3151 explored=2093 saved=2063 prove=0
+92s: mem=479Mb trans=8099 traceSteps=8069 explored=4344 saved=4314 prove=0
+107s: mem=479Mb trans=15303 traceSteps=15272 explored=7872 saved=7842 prove=0
+122s: mem=479Mb trans=26284 traceSteps=26254 explored=13573 saved=13543 prove=0
+137s: mem=479Mb trans=43605 traceSteps=43574 explored=22034 saved=22004 prove=0
+152s: mem=479Mb trans=65412 traceSteps=65382 explored=32889 saved=32859 prove=0
+167s: mem=479Mb trans=90441 traceSteps=90411 explored=45390 saved=45360 prove=0
+182s: mem=616Mb trans=128639 traceSteps=128609 explored=64288 saved=64258 prove=0
+197s: mem=617Mb trans=171231 traceSteps=171201 explored=85443 saved=85413 prove=0
+212s: mem=861Mb trans=225274 traceSteps=225244 explored=111541 saved=111511 prove=0
+1. Curr_Bound = 0
+
+After assigning the nextStack = 112014
+2. New_Bound = 1
+
+2. NextStack-Size = 0
+
+
+Violation 0 encountered at depth 112516:
+CIVL execution violation in p10(id=10) (kind: ASSERTION_VIOLATION, certainty: PROVEABLE)
+at boundedBuffer_bad.cvl:31.4-27 "$assert(emptyCount > 0)":
+
+Assertion: (0<emptyCount)
+        -> 0<0
+        -> false
+
+Input:
+  BUFFER_SIZE=100
+  NPRODUCER=5
+  NCONSUMER=5
+Context:
+  true
+Call stacks:
+process p0 (id=0):
+  main at boundedBuffer_bad.cvl:57.2-10 "$waitall"
+process p1 (id=1):
+  consumer at boundedBuffer_bad.cvl:39.9-14 "$true"
+process p2 (id=2):
+  consumer at boundedBuffer_bad.cvl:39.9-14 "$true"
+process p3 (id=3):
+  consumer at boundedBuffer_bad.cvl:39.9-14 "$true"
+process p4 (id=4):
+  consumer at boundedBuffer_bad.cvl:39.9-14 "$true"
+process p5 (id=5):
+  consumer at boundedBuffer_bad.cvl:39.9-14 "$true"
+process p6 (id=6):
+  producer at boundedBuffer_bad.cvl:30.4-9 "$when"
+process p7 (id=7):
+  producer at boundedBuffer_bad.cvl:30.4-9 "$when"
+process p8 (id=8):
+  producer at boundedBuffer_bad.cvl:30.4-9 "$when"
+process p9 (id=9):
+  producer at boundedBuffer_bad.cvl:30.4-9 "$when"
+process p10 (id=10):
+  producer at boundedBuffer_bad.cvl:31.4-11 "$assert"
+
+Logging new entry 0, writing trace to CIVLREP/boundedBuffer_bad_0.trace
+Terminating search after finding 1 violation.
+
+=== Command ===
+civl verify examples/concurrency/boundedBuffer_bad.cvl 
+
+=== Stats ===
+   time (s)            : 223.66
+   memory (bytes)      : 910688256
+   max process count   : 11
+   states              : 123027
+   states saved        : 122967
+   state matches       : 125210
+   transitions         : 248237
+   trace steps         : 248176
+   valid calls         : 1279374
+   provers             : cvc3
+   prover calls        : 0
+
+=== Result ===
+The program MAY NOT be correct.  See CIVLREP/boundedBuffer_bad_log.txt

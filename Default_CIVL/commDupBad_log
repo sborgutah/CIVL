@@ -1,0 +1,53 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+142s: mem=479Mb trans=217 traceSteps=115 explored=219 saved=116 prove=2
+157s: mem=479Mb trans=354 traceSteps=207 explored=357 saved=208 prove=2
+
+Violation 0 encountered at depth 220:
+CIVL execution violation (kind: DEADLOCK, certainty: PROVEABLE)
+at MPITransformer:0.-1-20 "$parfor (int i: 0 ..." inserted by MPITransformer.$parfor MPI_Process before op.h:21.1-10 "Operation" included from civlc.cvh:8.8-14 "<op.h>" included from mpi.cvl:4.9-20 "<civlc.cvh>":
+A deadlock is possible:
+  Path condition: X__gen_argc - 9 <= 0 && 0 <= SIZEOF_INT - 1 && 0 <= SIZEOF_REAL - 1 && 0 <= X__gen_argc - 1 && 0 <= X__mpi_nprocs_hi - 2
+  Enabling predicate: false
+process p0 (id=0): false
+process p1 (id=1): false
+process p2 (id=2): false
+
+Call stacks:
+process p0 (id=0):
+  main at MPITransformer:0.-1-20 "$parfor (int i: 0 ..." inserted by MPITransformer.$parfor MPI_Process before op.h:21.1-10 "Operation" included from civlc.cvh:8.8-14 "<op.h>" included from mpi.cvl:4.9-20 "<civlc.cvh>"
+process p1 (id=1):
+  $mpi_collective_recv at civl-mpi.cvl:304.18-31 "$comm_dequeue" called from
+  $mpi_gather at civl-mpi.cvl:413.1-21 "$mpi_collective_recv" called from
+  $mpi_comm_free at civl-mpi.cvl:618.2-13 "$mpi_gather" called from
+  MPI_Comm_free at mpi.cvl:507.2-16 "$mpi_comm_free" called from
+  _gen_main at commDupBad.c:22.2-15 "MPI_Comm_free" called from
+  _mpi_process at GeneralTransformer:0.-1-20 "_gen_argc, &(_gen_..." inserted by GeneralTransformer.new main function before commDupBad.c:6.13-17 "argc" called from
+  _par_proc0 at MPITransformer:0.-1-0 "i" inserted by MPITransformer.function call _mpi_process before op.h:21.1-10 "Operation" included from civlc.cvh:8.8-14 "<op.h>" included from mpi.cvl:4.9-20 "<civlc.cvh>"
+process p2 (id=2):
+  $mpi_recv at civl-mpi.cvl:199.9-22 "$comm_dequeue" called from
+  MPI_Recv at mpi.cvl:83.9-18 "$mpi_recv" called from
+  _gen_main at commDupBad.c:21.4-12 "MPI_Recv" called from
+  _mpi_process at GeneralTransformer:0.-1-20 "_gen_argc, &(_gen_..." inserted by GeneralTransformer.new main function before commDupBad.c:6.13-17 "argc" called from
+  _par_proc0 at MPITransformer:0.-1-0 "i" inserted by MPITransformer.function call _mpi_process before op.h:21.1-10 "Operation" included from civlc.cvh:8.8-14 "<op.h>" included from mpi.cvl:4.9-20 "<civlc.cvh>"
+
+Logging new entry 0, writing trace to CIVLREP/commDupBad_0.trace
+Terminating search after finding 1 violation.
+
+=== Command ===
+civl verify -input_mpi_nprocs=2 examples/mpi/simple/commDupBad.c 
+
+=== Stats ===
+   time (s)            : 159.03
+   memory (bytes)      : 502792192
+   max process count   : 3
+   states              : 376
+   states saved        : 220
+   state matches       : 0
+   transitions         : 371
+   trace steps         : 219
+   valid calls         : 41072
+   provers             : cvc3
+   prover calls        : 2
+
+=== Result ===
+The program MAY NOT be correct.  See CIVLREP/commDupBad_log.txt

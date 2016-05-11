@@ -1,0 +1,26 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+56s: mem=479Mb trans=499 traceSteps=184 explored=463 saved=145 prove=6
+71s: mem=479Mb trans=1910 traceSteps=766 explored=1682 saved=532 prove=6
+86s: mem=479Mb trans=4647 traceSteps=2002 explored=3861 saved=1210 prove=6
+101s: mem=479Mb trans=8152 traceSteps=3588 explored=6676 saved=2105 prove=6
+116s: mem=479Mb trans=13792 traceSteps=6379 explored=10907 saved=3486 prove=6
+131s: mem=479Mb trans=21985 traceSteps=10166 explored=17024 saved=5197 prove=6
+
+=== Command ===
+civl verify examples/concurrency/barrier2.cvl 
+
+=== Stats ===
+   time (s)            : 144.1
+   memory (bytes)      : 502792192
+   max process count   : 5
+   states              : 20794
+   states saved        : 6095
+   state matches       : 6320
+   transitions         : 27105
+   trace steps         : 12414
+   valid calls         : 224688
+   provers             : cvc3
+   prover calls        : 6
+
+=== Result ===
+The standard properties hold for all executions.

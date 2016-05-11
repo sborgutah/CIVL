@@ -1,0 +1,21 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+52s: mem=479Mb trans=159 traceSteps=109 explored=155 saved=104 prove=17
+
+=== Command ===
+civl verify examples/concurrency/adder.cvl 
+
+=== Stats ===
+   time (s)            : 64.04
+   memory (bytes)      : 502792192
+   max process count   : 6
+   states              : 924
+   states saved        : 625
+   state matches       : 72
+   transitions         : 990
+   trace steps         : 696
+   valid calls         : 12593
+   provers             : cvc3
+   prover calls        : 17
+
+=== Result ===
+The standard properties hold for all executions.

@@ -1,0 +1,39 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+
+Violation 0 encountered at depth 3:
+CIVL execution violation in p0(id=0) (kind: ASSERTION_VIOLATION, certainty: MAYBE)
+at evaluatePc.cvl:21.2-17 "$assert($false)":
+
+Assertion: false
+        -> false
+
+Input:
+  a=X_a
+Context:
+  (((X_a[3]+(-1*X_a[5]))*X_a[1])+(-1*(X_a[2]*X_a[3]))+(X_a[2]*X_a[4])+(-1*(X_a[4]*X_a[0]))+(X_a[5]*X_a[0]))<0
+  0!=(((X_a[3]+(-1*X_a[5]))*X_a[1])+(-1*(X_a[2]*X_a[3]))+(X_a[2]*X_a[4])+(-1*(X_a[4]*X_a[0]))+(X_a[5]*X_a[0]))
+Call stacks:
+process p0 (id=0):
+  main at evaluatePc.cvl:21.2-9 "$assert"
+
+Logging new entry 0, writing trace to CIVLREP/evaluatePc_0.trace
+Terminating search after finding 1 violation.
+
+=== Command ===
+civl verify examples/reasoning/evaluatePc.cvl 
+
+=== Stats ===
+   time (s)            : 53.07
+   memory (bytes)      : 502792192
+   max process count   : 1
+   states              : 13
+   states saved        : 3
+   state matches       : 0
+   transitions         : 14
+   trace steps         : 2
+   valid calls         : 52
+   provers             : cvc3
+   prover calls        : 1
+
+=== Result ===
+The program MAY NOT be correct.  See CIVLREP/evaluatePc_log.txt

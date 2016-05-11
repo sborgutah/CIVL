@@ -1,0 +1,46 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+59s: mem=479Mb trans=228 traceSteps=167 explored=157 saved=96 prove=17
+74s: mem=479Mb trans=1526 traceSteps=1203 explored=909 saved=584 prove=17
+1. Curr_Bound = 0
+
+After assigning the nextStack = 671
+2. New_Bound = 1
+
+2. NextStack-Size = 0
+
+89s: mem=479Mb trans=4149 traceSteps=3384 explored=2128 saved=1354 prove=17
+1. Curr_Bound = 1
+
+After assigning the nextStack = 824
+2. New_Bound = 2
+
+2. NextStack-Size = 0
+
+104s: mem=479Mb trans=8703 traceSteps=7352 explored=3804 saved=2444 prove=17
+1. Curr_Bound = 2
+
+After assigning the nextStack = 21
+2. New_Bound = 3
+
+2. NextStack-Size = 0
+
+workRemains = false
+
+=== Command ===
+civl verify examples/concurrency/adder.cvl 
+
+=== Stats ===
+   time (s)            : 106.39
+   memory (bytes)      : 502792192
+   max process count   : 6
+   states              : 3994
+   states saved        : 2576
+   state matches       : 5885
+   transitions         : 9868
+   trace steps         : 8460
+   valid calls         : 41330
+   provers             : cvc3
+   prover calls        : 17
+
+=== Result ===
+The standard properties hold for all executions.

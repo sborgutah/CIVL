@@ -1,0 +1,46 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+66s: mem=479Mb trans=110 traceSteps=31 explored=110 saved=32 prove=32
+81s: mem=479Mb trans=3030 traceSteps=564 explored=2767 saved=302 prove=40
+96s: mem=479Mb trans=8468 traceSteps=1545 explored=7719 saved=797 prove=46
+111s: mem=479Mb trans=15675 traceSteps=2853 explored=14256 saved=1435 prove=46
+1. Curr_Bound = 0
+
+After assigning the nextStack = 2306
+2. New_Bound = 1
+
+2. NextStack-Size = 0
+
+1. Curr_Bound = 1
+
+After assigning the nextStack = 0
+2. New_Bound = 2
+
+2. NextStack-Size = 0
+
+1. Curr_Bound = 2
+
+After assigning the nextStack = 0
+2. New_Bound = 3
+
+2. NextStack-Size = 0
+
+workRemains = false
+
+=== Command ===
+civl verify examples/arithmetic/matmat.cvl 
+
+=== Stats ===
+   time (s)            : 124.14
+   memory (bytes)      : 502792192
+   max process count   : 1
+   states              : 24335
+   states saved        : 2379
+   state matches       : 2378
+   transitions         : 26712
+   trace steps         : 4756
+   valid calls         : 34609
+   provers             : cvc3
+   prover calls        : 46
+
+=== Result ===
+The standard properties hold for all executions.

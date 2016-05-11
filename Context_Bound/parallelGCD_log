@@ -1,0 +1,61 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+72s: mem=479Mb trans=127 traceSteps=81 explored=87 saved=42 prove=29
+1. Curr_Bound = 0
+
+After assigning the nextStack = 55
+2. New_Bound = 1
+
+2. NextStack-Size = 0
+
+87s: mem=479Mb trans=285 traceSteps=183 explored=193 saved=91 prove=58
+102s: mem=479Mb trans=343 traceSteps=233 explored=227 saved=118 prove=82
+
+Violation 0 encountered at depth 67:
+CIVL execution violation in p0(id=0) (kind: ASSERTION_VIOLATION, certainty: MAYBE)
+at parallelGCD.c:85.2-70 "$assert($forall {i =  ... )":
+
+Assertion: FORALL {int i=(result1+1)..minAB} (((A%i)!=0)||((B%i)!=0))
+        -> FORALL {int i=(result1+1)..minAB} (((A%i)!=0)||((B%i)!=0))
+        -> forall i : int . (0 != X_A%i || 0 != X_B%i || !(3*X_A - 2*X_B - 1*i + 1 <= 0) || !(0 <= X_A - 1*i))
+
+Input:
+  A_BOUND=4
+  B_BOUND=6
+  A=X_A
+  B=X_B
+Context:
+  (X_A+(-1*X_B)+1)<=0
+  (X_A-3)<=0
+  (X_B-5)<=0
+  0<=(X_A-1)
+  0<=((2*X_A)+(-1*X_B)-1)
+  0<=((3*X_A)+(-2*X_B)-1)
+  0<=(X_B-1)
+  0!=(X_A+(-1*X_B))
+  0!=((2*X_A)+(-1*X_B))
+  0!=((3*X_A)+(-2*X_B))
+Call stacks:
+process p0 (id=0):
+  main at parallelGCD.c:85.2-9 "$assert"
+
+Logging new entry 0, writing trace to CIVLREP/parallelGCD_0.trace
+Terminating search after finding 1 violation.
+
+=== Command ===
+civl verify examples/verifyThisProblems/parallelGCD.c 
+
+=== Stats ===
+   time (s)            : 101.92
+   memory (bytes)      : 502792192
+   max process count   : 3
+   states              : 227
+   states saved        : 118
+   state matches       : 116
+   transitions         : 343
+   trace steps         : 233
+   valid calls         : 902
+   provers             : cvc3
+   prover calls        : 82
+
+=== Result ===
+The program MAY NOT be correct.  See CIVLREP/parallelGCD_log.txt

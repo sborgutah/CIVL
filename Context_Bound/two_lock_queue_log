@@ -1,0 +1,42 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+1. Curr_Bound = 0
+
+After assigning the nextStack = 83
+2. New_Bound = 1
+
+2. NextStack-Size = 0
+
+1. Curr_Bound = 1
+
+After assigning the nextStack = 61
+2. New_Bound = 2
+
+2. NextStack-Size = 0
+
+1. Curr_Bound = 2
+
+After assigning the nextStack = 45
+2. New_Bound = 3
+
+2. NextStack-Size = 0
+
+workRemains = false
+
+=== Command ===
+civl verify examples/concurrency/two_lock_queue.cvl 
+
+=== Stats ===
+   time (s)            : 76.97
+   memory (bytes)      : 502792192
+   max process count   : 3
+   states              : 434
+   states saved        : 218
+   state matches       : 280
+   transitions         : 713
+   trace steps         : 497
+   valid calls         : 565
+   provers             : cvc3
+   prover calls        : 1
+
+=== Result ===
+The standard properties hold for all executions.

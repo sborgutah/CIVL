@@ -1,0 +1,36 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+
+Violation 0 encountered at depth 1:
+CIVL execution violation in p0 (id = 0) (kind: UNDEFINED_VALUE, certainty: PROVEABLE)
+at c_pi.c:65.12-13 "N":
+attempt to read uninitialized variable N
+
+Input:
+  _omp_thread_max=X__omp_thread_max
+Context:
+  true
+Call stacks:
+process p0 (id=0):
+  main at c_pi.c:65.2-3 "w"
+
+Logging new entry 0, writing trace to CIVLREP/c_pi_0.trace
+Terminating search after finding 1 violation.
+
+=== Command ===
+civl verify examples/omp/c_pi.c 
+
+=== Stats ===
+   time (s)            : 96.23
+   memory (bytes)      : 502792192
+   max process count   : 0
+   states              : 3
+   states saved        : 1
+   state matches       : 0
+   transitions         : 4
+   trace steps         : 0
+   valid calls         : 1
+   provers             : cvc3
+   prover calls        : 0
+
+=== Result ===
+The program MAY NOT be correct.  See CIVLREP/c_pi_log.txt

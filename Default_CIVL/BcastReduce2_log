@@ -1,0 +1,24 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+150s: mem=479Mb trans=121 traceSteps=68 explored=123 saved=69 prove=2
+165s: mem=479Mb trans=436 traceSteps=260 explored=439 saved=261 prove=2
+180s: mem=479Mb trans=524 traceSteps=316 explored=527 saved=317 prove=2
+195s: mem=479Mb trans=710 traceSteps=436 explored=713 saved=437 prove=2
+
+=== Command ===
+civl verify -input_mpi_nprocs=2 examples/mpi/collective/BcastReduce2.c 
+
+=== Stats ===
+   time (s)            : 205.21
+   memory (bytes)      : 502792192
+   max process count   : 3
+   states              : 917
+   states saved        : 557
+   state matches       : 0
+   transitions         : 912
+   trace steps         : 556
+   valid calls         : 69273
+   provers             : cvc3
+   prover calls        : 2
+
+=== Result ===
+The standard properties hold for all executions.

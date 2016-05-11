@@ -1,0 +1,42 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+1. Curr_Bound = 0
+
+After assigning the nextStack = 10
+2. New_Bound = 1
+
+2. NextStack-Size = 0
+
+1. Curr_Bound = 1
+
+After assigning the nextStack = 0
+2. New_Bound = 2
+
+2. NextStack-Size = 0
+
+1. Curr_Bound = 2
+
+After assigning the nextStack = 0
+2. New_Bound = 3
+
+2. NextStack-Size = 0
+
+workRemains = false
+
+=== Command ===
+civl verify examples/sideEffects/postIncr.cvl 
+
+=== Stats ===
+   time (s)            : 46.04
+   memory (bytes)      : 502792192
+   max process count   : 1
+   states              : 70
+   states saved        : 12
+   state matches       : 11
+   transitions         : 80
+   trace steps         : 22
+   valid calls         : 10
+   provers             : cvc3
+   prover calls        : 0
+
+=== Result ===
+The standard properties hold for all executions.

@@ -1,0 +1,51 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+
+Violation 0 encountered at depth 59:
+CIVL execution violation (kind: DEADLOCK, certainty: PROVEABLE)
+at barrierBad.cvl:44.26-31 "$wait":
+A deadlock is possible:
+  Path condition: true
+  Enabling predicate: false
+process p0 (id=0): false
+process p1 (id=1): false
+process p2 (id=2): false
+process p3 (id=3): false
+process p4 (id=4): false
+
+Call stacks:
+process p0 (id=0):
+  main at barrierBad.cvl:44.26-31 "$wait"
+process p1 (id=1):
+  barrier at barrierBad.cvl:25.2-7 "$when" called from
+  run at barrierBad.cvl:33.4-11 "barrier"
+process p2 (id=2):
+  barrier at barrierBad.cvl:25.2-7 "$when" called from
+  run at barrierBad.cvl:33.4-11 "barrier"
+process p3 (id=3):
+  barrier at barrierBad.cvl:25.2-7 "$when" called from
+  run at barrierBad.cvl:33.4-11 "barrier"
+process p4 (id=4):
+  barrier at barrierBad.cvl:25.2-7 "$when" called from
+  run at barrierBad.cvl:33.4-11 "barrier"
+
+Logging new entry 0, writing trace to CIVLREP/barrierBad_0.trace
+Terminating search after finding 1 violation.
+
+=== Command ===
+civl verify examples/concurrency/barrierBad.cvl 
+
+=== Stats ===
+   time (s)            : 44.35
+   memory (bytes)      : 502792192
+   max process count   : 5
+   states              : 107
+   states saved        : 59
+   state matches       : 0
+   transitions         : 106
+   trace steps         : 58
+   valid calls         : 710
+   provers             : cvc3
+   prover calls        : 13
+
+=== Result ===
+The program MAY NOT be correct.  See CIVLREP/barrierBad_log.txt

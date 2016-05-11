@@ -1,0 +1,42 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+1. Curr_Bound = 0
+
+After assigning the nextStack = 51
+2. New_Bound = 1
+
+2. NextStack-Size = 0
+
+1. Curr_Bound = 1
+
+After assigning the nextStack = 100
+2. New_Bound = 2
+
+2. NextStack-Size = 0
+
+1. Curr_Bound = 2
+
+After assigning the nextStack = 0
+2. New_Bound = 3
+
+2. NextStack-Size = 0
+
+workRemains = false
+
+=== Command ===
+civl verify examples/concurrency/spawn2.cvl 
+
+=== Stats ===
+   time (s)            : 54.19
+   memory (bytes)      : 502792192
+   max process count   : 3
+   states              : 1057
+   states saved        : 159
+   state matches       : 290
+   transitions         : 1346
+   trace steps         : 448
+   valid calls         : 2
+   provers             : cvc3
+   prover calls        : 0
+
+=== Result ===
+The standard properties hold for all executions.

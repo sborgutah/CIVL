@@ -1,0 +1,21 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+57s: mem=479Mb trans=305 traceSteps=189 explored=282 saved=166 prove=0
+
+=== Command ===
+civl verify examples/concurrency/readerWriter.cvl 
+
+=== Stats ===
+   time (s)            : 68.94
+   memory (bytes)      : 502792192
+   max process count   : 7
+   states              : 1237
+   states saved        : 488
+   state matches       : 765
+   transitions         : 2001
+   trace steps         : 1252
+   valid calls         : 16866
+   provers             : cvc3
+   prover calls        : 0
+
+=== Result ===
+The standard properties hold for all executions.

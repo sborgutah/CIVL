@@ -1,0 +1,20 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+
+=== Command ===
+civl verify examples/arithmetic/trySimple.cvl 
+
+=== Stats ===
+   time (s)            : 83.67
+   memory (bytes)      : 502792192
+   max process count   : 1
+   states              : 20
+   states saved        : 8
+   state matches       : 0
+   transitions         : 19
+   trace steps         : 7
+   valid calls         : 10
+   provers             : cvc3
+   prover calls        : 0
+
+=== Result ===
+The standard properties hold for all executions.

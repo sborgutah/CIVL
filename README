@@ -1,0 +1,8 @@
+1. The directories Context_Bound and Default_CIVL contain logs from modified and original CIVL setups.
+2. filelist.txt contains the names of all the logs in each direcotry.
+3. parseResult.pl parses each of these logs and generates a .csv file containing comparitive tables of 
+   runtimes, number of states explored and whether or not the property was violaed.
+4. To run the parseResult.pl, simply type the following on the prompt :
+   $> ./parseResult.pl
+
+

@@ -1,0 +1,22 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+141s: mem=479Mb trans=187 traceSteps=113 explored=189 saved=114 prove=0
+156s: mem=479Mb trans=392 traceSteps=235 explored=395 saved=236 prove=1
+
+=== Command ===
+civl verify -input_mpi_nprocs=2 examples/mpi/simple/allgather.c 
+
+=== Stats ===
+   time (s)            : 163.19
+   memory (bytes)      : 502792192
+   max process count   : 3
+   states              : 588
+   states saved        : 358
+   state matches       : 0
+   transitions         : 584
+   trace steps         : 357
+   valid calls         : 42500
+   provers             : cvc3
+   prover calls        : 1
+
+=== Result ===
+The standard properties hold for all executions.

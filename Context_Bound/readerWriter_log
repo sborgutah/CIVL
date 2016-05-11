@@ -1,0 +1,45 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+1. Curr_Bound = 0
+
+After assigning the nextStack = 41
+2. New_Bound = 1
+
+2. NextStack-Size = 0
+
+61s: mem=479Mb trans=991 traceSteps=747 explored=580 saved=336 prove=0
+1. Curr_Bound = 1
+
+After assigning the nextStack = 866
+2. New_Bound = 2
+
+2. NextStack-Size = 0
+
+76s: mem=479Mb trans=5224 traceSteps=4115 explored=2609 saved=1500 prove=0
+91s: mem=479Mb trans=11358 traceSteps=9148 explored=5304 saved=3095 prove=0
+1. Curr_Bound = 2
+
+After assigning the nextStack = 2530
+2. New_Bound = 3
+
+2. NextStack-Size = 0
+
+workRemains = false
+
+=== Command ===
+civl verify examples/concurrency/readerWriter.cvl 
+
+=== Stats ===
+   time (s)            : 97.31
+   memory (bytes)      : 502792192
+   max process count   : 7
+   states              : 6952
+   states saved        : 3786
+   state matches       : 7900
+   transitions         : 14851
+   trace steps         : 11685
+   valid calls         : 46300
+   provers             : cvc3
+   prover calls        : 0
+
+=== Result ===
+The standard properties hold for all executions.

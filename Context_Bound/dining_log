@@ -1,0 +1,44 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+1. Curr_Bound = 0
+
+After assigning the nextStack = 76
+2. New_Bound = 1
+
+2. NextStack-Size = 0
+
+60s: mem=479Mb trans=601 traceSteps=435 explored=382 saved=204 prove=5
+1. Curr_Bound = 1
+
+After assigning the nextStack = 356
+2. New_Bound = 2
+
+2. NextStack-Size = 0
+
+75s: mem=479Mb trans=2867 traceSteps=2100 explored=1625 saved=846 prove=5
+1. Curr_Bound = 2
+
+After assigning the nextStack = 819
+2. New_Bound = 3
+
+2. NextStack-Size = 0
+
+workRemains = false
+
+=== Command ===
+civl verify examples/concurrency/dining.cvl 
+
+=== Stats ===
+   time (s)            : 81.85
+   memory (bytes)      : 502792192
+   max process count   : 5
+   states              : 2572
+   states saved        : 1315
+   state matches       : 2323
+   transitions         : 4882
+   trace steps         : 3637
+   valid calls         : 26039
+   provers             : cvc3
+   prover calls        : 5
+
+=== Result ===
+The standard properties hold for all executions.

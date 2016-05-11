@@ -1,0 +1,45 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+67s: mem=479Mb trans=12 traceSteps=4 explored=12 saved=5 prove=25
+82s: mem=479Mb trans=33 traceSteps=14 explored=28 saved=11 prove=49
+97s: mem=479Mb trans=54 traceSteps=31 explored=43 saved=20 prove=72
+1. Curr_Bound = 0
+
+After assigning the nextStack = 39
+2. New_Bound = 1
+
+2. NextStack-Size = 0
+
+1. Curr_Bound = 1
+
+After assigning the nextStack = 0
+2. New_Bound = 2
+
+2. NextStack-Size = 0
+
+1. Curr_Bound = 2
+
+After assigning the nextStack = 0
+2. New_Bound = 3
+
+2. NextStack-Size = 0
+
+workRemains = false
+
+=== Command ===
+civl verify examples/verifyThisProblems/lcp.c 
+
+=== Stats ===
+   time (s)            : 110.83
+   memory (bytes)      : 502792192
+   max process count   : 1
+   states              : 93
+   states saved        : 53
+   state matches       : 52
+   transitions         : 144
+   trace steps         : 104
+   valid calls         : 1089
+   provers             : cvc3
+   prover calls        : 105
+
+=== Result ===
+The standard properties hold for all executions.

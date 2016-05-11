@@ -1,0 +1,46 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+89s: mem=479Mb trans=920 traceSteps=484 explored=701 saved=266 prove=1
+105s: mem=479Mb trans=3671 traceSteps=1941 explored=2740 saved=1011 prove=1
+120s: mem=479Mb trans=8820 traceSteps=4647 explored=6530 saved=2358 prove=1
+135s: mem=479Mb trans=16409 traceSteps=8604 explored=12178 saved=4374 prove=1
+1. Curr_Bound = 0
+
+After assigning the nextStack = 4372
+2. New_Bound = 1
+
+2. NextStack-Size = 0
+
+1. Curr_Bound = 1
+
+After assigning the nextStack = 0
+2. New_Bound = 2
+
+2. NextStack-Size = 0
+
+1. Curr_Bound = 2
+
+After assigning the nextStack = 0
+2. New_Bound = 3
+
+2. NextStack-Size = 0
+
+workRemains = false
+
+=== Command ===
+civl verify examples/verifyThisProblems/dancingLinks.c 
+
+=== Stats ===
+   time (s)            : 134.82
+   memory (bytes)      : 502792192
+   max process count   : 1
+   states              : 12331
+   states saved        : 4374
+   state matches       : 4408
+   transitions         : 16738
+   trace steps         : 8781
+   valid calls         : 28701
+   provers             : cvc3
+   prover calls        : 1
+
+=== Result ===
+The standard properties hold for all executions.

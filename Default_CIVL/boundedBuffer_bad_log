@@ -1,0 +1,63 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+51s: mem=479Mb trans=202 traceSteps=171 explored=186 saved=156 prove=0
+
+Violation 0 encountered at depth 288:
+CIVL execution violation in p5(id=5) (kind: ASSERTION_VIOLATION, certainty: PROVEABLE)
+at boundedBuffer_bad.cvl:41.4-26 "$assert(fillCount > 0)":
+
+Assertion:
+   $assert(0<0)
+-> 0<0
+-> false
+
+Input:
+  BUFFER_SIZE=100
+  NPRODUCER=5
+  NCONSUMER=5
+Context:
+  true
+Call stacks:
+process p0 (id=0):
+  main at boundedBuffer_bad.cvl:57.2-10 "$waitall"
+process p1 (id=1):
+  consumer at boundedBuffer_bad.cvl:40.4-9 "$when"
+process p2 (id=2):
+  consumer at boundedBuffer_bad.cvl:40.4-9 "$when"
+process p3 (id=3):
+  consumer at boundedBuffer_bad.cvl:40.4-9 "$when"
+process p4 (id=4):
+  consumer at boundedBuffer_bad.cvl:40.4-9 "$when"
+process p5 (id=5):
+  consumer at boundedBuffer_bad.cvl:41.4-11 "$assert"
+process p6 (id=6):
+  producer at boundedBuffer_bad.cvl:30.4-9 "$when"
+process p7 (id=7):
+  producer at boundedBuffer_bad.cvl:32.4-14 "emptyCount"
+process p8 (id=8):
+  producer at boundedBuffer_bad.cvl:31.4-11 "$assert"
+process p9 (id=9):
+  producer at boundedBuffer_bad.cvl:30.4-9 "$when"
+process p10 (id=10):
+  producer at boundedBuffer_bad.cvl:32.4-14 "emptyCount"
+
+Logging new entry 0, writing trace to CIVLREP/boundedBuffer_bad_0.trace
+Terminating search after finding 1 violation.
+
+=== Command ===
+civl verify examples/concurrency/boundedBuffer_bad.cvl 
+
+=== Stats ===
+   time (s)            : 57.78
+   memory (bytes)      : 502792192
+   max process count   : 11
+   states              : 318
+   states saved        : 288
+   state matches       : 31
+   transitions         : 349
+   trace steps         : 318
+   valid calls         : 9703
+   provers             : cvc3
+   prover calls        : 0
+
+=== Result ===
+The program MAY NOT be correct.  See CIVLREP/boundedBuffer_bad_log.txt

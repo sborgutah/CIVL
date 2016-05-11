@@ -1,0 +1,20 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+
+=== Command ===
+civl verify examples/omp/canonicalForLoops.c 
+
+=== Stats ===
+   time (s)            : 98.77
+   memory (bytes)      : 502792192
+   max process count   : 1
+   states              : 59
+   states saved        : 20
+   state matches       : 0
+   transitions         : 58
+   trace steps         : 19
+   valid calls         : 66
+   provers             : cvc3
+   prover calls        : 0
+
+=== Result ===
+The standard properties hold for all executions.

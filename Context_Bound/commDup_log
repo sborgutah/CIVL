@@ -1,0 +1,51 @@
+CIVL v1.7 of 2016-03-31 -- http://vsl.cis.udel.edu/civl
+162s: mem=479Mb trans=474 traceSteps=285 explored=475 saved=286 prove=2
+1. Curr_Bound = 0
+
+After assigning the nextStack = 601
+2. New_Bound = 1
+
+2. NextStack-Size = 0
+
+177s: mem=479Mb trans=2496 traceSteps=1534 explored=1736 saved=773 prove=2
+192s: mem=479Mb trans=7923 traceSteps=4600 explored=5633 saved=2310 prove=2
+207s: mem=479Mb trans=15879 traceSteps=9083 explored=11324 saved=4527 prove=2
+222s: mem=476Mb trans=22079 traceSteps=12972 explored=15569 saved=6461 prove=2
+237s: mem=609Mb trans=33962 traceSteps=20538 explored=23652 saved=10227 prove=2
+1. Curr_Bound = 1
+
+After assigning the nextStack = 14110
+2. New_Bound = 2
+
+2. NextStack-Size = 0
+
+252s: mem=590Mb trans=61360 traceSteps=37657 explored=42104 saved=18400 prove=2
+267s: mem=526Mb trans=104023 traceSteps=65704 explored=66853 saved=28533 prove=2
+282s: mem=496Mb trans=158516 traceSteps=97952 explored=102756 saved=42191 prove=2
+1. Curr_Bound = 2
+
+After assigning the nextStack = 27420
+2. New_Bound = 3
+
+2. NextStack-Size = 0
+
+workRemains = false
+
+=== Command ===
+civl verify -input_mpi_nprocs=2 examples/mpi/simple/commDup.c 
+
+=== Stats ===
+   time (s)            : 282.22
+   memory (bytes)      : 537919488
+   max process count   : 3
+   states              : 104673
+   states saved        : 43020
+   state matches       : 57324
+   transitions         : 161994
+   trace steps         : 100343
+   valid calls         : 775278
+   provers             : cvc3
+   prover calls        : 2
+
+=== Result ===
+The standard properties hold for all executions.
